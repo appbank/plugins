@@ -53,6 +53,10 @@ class NavigationRequest {
   /// Whether the navigation request is to be loaded as the main frame.
   final bool isForMainFrame;
 
+  factory NavigationRequest(String url) {
+    return NavigationRequest._(url: url, isForMainFrame: false);
+  }
+
   @override
   String toString() {
     return '$runtimeType(url: $url, isForMainFrame: $isForMainFrame)';
